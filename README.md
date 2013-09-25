@@ -29,4 +29,5 @@ Presentation and code from my session on Responsive Web Design at
 
 [Video of this session](http://textiles.online.ncsu.edu/online/Play/d1dd552ab7e74b859b837bee9a07a39e1d?catalog=109c4c50-f182-410f-a13a-b31be9cf5323)
 
+[Slides from this session](http://ptraeg.github.io/ncdevcon-2013/responsiveweb/)
 
