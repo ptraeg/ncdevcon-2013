@@ -8,6 +8,8 @@ Presentation and code from my session on Building Mobile Applications: Strategie
 
 [Video of this session](http://textiles.online.ncsu.edu/online/Play/fd2b60d268664101ac5b78056b4162fe1d?catalog=109c4c50-f182-410f-a13a-b31be9cf5323)
 
+[Slides from this session](http://ptraeg.github.io/ncdevcon-2013/responsiveweb/)
+
 Example code is provided for:
 * Native iOS
 * Native Android
