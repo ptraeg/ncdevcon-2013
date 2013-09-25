@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Srcset Polyfill Demo</title>
+    <script src="lib/js/srcset.js"></script>
+    <style>
+        body {
+            margin: 2rem;
+            font-family: sans-serif;
+        }
+        img {
+            width: 100%;
+        }
+    </style>
+  </head>
+
+  <div id="container">
+    <img alt="The Golden Gate Bridge"
+         sr2c="images/golden_gate_320.jpg"
+         srcset="images/golden_gate_320.jpg 400w, images/golden_gate_800.jpg 900w, images/golden_gate_1600.jpg 1500w, images/golden_gate_1600.jpg 2x">
+    </div>
+  </body>
+  
+</html>
+

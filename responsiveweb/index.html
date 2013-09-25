@@ -1,0 +1,1060 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Responsive Web - Do I need it?  How do I build it?</title>
+
+		<meta name="description" content="All about responsive web design">
+		<meta name="author" content="Peter Traeg">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<!--<link rel="stylesheet" href="css/theme/default.css" id="theme">-->
+        <!--<link rel="stylesheet" href="css/theme/um-white.css" id="theme">-->
+        <link rel="stylesheet" href="css/theme/um.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+        <link rel="stylesheet" href="css/custom.css">
+
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+
+        <!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Responsive Web Design</h1>
+                    <br/>
+					<h3>Do I need it?  How do I build it?</h3>
+					<p>
+						<small>Presented by <a href="mailto:peter.traeg@universalmind.com">Peter Traeg</a> / <a href="http://twitter.com/ptraeg">@ptraeg</a></small>
+                        <br/>
+                        <img src="images/umlogo_green.png">
+					</p>
+				</section>
+
+                <section>
+                    <section>
+                        <h2>About Me:</h2>
+                        <p>
+                            Peter Traeg<br/>
+                            <i>Solutions Architect, Universal Mind</i>
+                        </p>
+
+                        <p>
+                            iOS, Android, and Web Developer
+                        </p>
+
+                        <p>&nbsp;</p>
+                        <p>
+                            <a href="mailto:peter.traeg@universalmind.com">peter.traeg@universalmind.com</a>
+                        </p>
+
+                        <p>&nbsp;</p>
+                        <p>
+                            Slides / Code: <a href="http://blog.traeg.org" target="_blank">http://traeg.org</a> <br/>
+                            Twitter: <a href="http://twitter.com/ptraeg" target="_blank">@ptraeg</a>
+                        </p>
+
+                    </section>
+
+                    <section>
+                        <p style="font-size:1.1em">About Universal Mind:</p>
+                        <img style="width:80%" src="images/um-clients.png">
+                    </section>
+                </section>
+
+                <section>
+                    <h2>What are we going to cover?</h2>
+                    <ul>
+                        <li>
+                            Responsive design - why do I need it?
+                        </li>
+                        <li>
+                            Three major components of responsive design:
+                            <ol>
+                                <li>
+                                    Responsive Layout
+                                </li>
+                                <li>
+                                    Responsive Images
+                                </li>
+                                <li>
+                                    Responsive Content
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            Resources for:
+                            <ul>
+                                <li>Learning</li>
+                                <li>Development Tools</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Why do I need it?</h2>
+                        <p>&nbsp;</p>
+                        <h3>It's not just a desktop world anymore</h3>
+                    </section>
+
+                    <section>
+                        <h3>Your content ...</h3>
+                        <ul class="no-bullets">
+                            <li class="fragment" style="list-style:none">
+                                <h4>On many devices:</h4>
+                                <img src="images/phone-tablet-desktop.jpg"/>
+                            </li>
+                        </ul>
+                    </section> 
+
+                    <section>
+                        <h4>Explosion of screen resolutions and ratios:</h4>
+                        <a href="https://icat.okcareertech.org/cgi-bin/WebObjects/OKCT.woa/wa/room?id=Urv0D&bid=13333">
+                            <img src="images/screen-resolutions.png"/>
+                        </a>
+                    </section> 
+
+                    <section>
+                        <h4>High Resolution (Retina) Displays</h4>
+                        <a href="http://www.gadgetreview.com/wp-content/uploads/2010/06/Retina-Display-Faked-1.jpg">
+                            <img src="images/retina-display-faked.jpg"/>
+                        </a>
+                    </section> 
+
+                    <section>
+                        <h3>Responsive doesn't just mean layout</h3>
+                        <br/>
+                        <ul class="no-bullets">
+                            <li class="fragment" style="text-align:center">
+                                <h5>Responsive means performance</h5>
+                                <img src="images/network-snail.jpg"/><br/>
+                                People on low-bandwidth connections still expect pages<br/> 
+                                to load in 2 or 3 sec
+                            </li>
+                        </ul>
+                    </section> 
+
+                    <section>
+                        <h3>Responsive Means Revenue</h3>
+                        <br/>
+                        <h5>O'Neil Clothing:</h5>
+                        <ul class="no-bullets">
+                            <li class="fragment">
+                                iPhone / iPod Users:
+                                <ul>
+                                    <li>Conversions increased 65.71%</li>
+                                    <li>Transactions up 112.5%</li>
+                                    <li>Revenue increased 101.25%</li>
+                                </ul>
+                            </li>
+                            <li class="fragment">
+                                Android Users:
+                                <ul>
+                                    <li>Conversions increased 407.32%</li>
+                                    <li>Transactions up 333.33%</li>
+                                    <li>Revenue increased 591.42%</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <p>
+                            <small><a href="http://electricpulp.com/notes/you-like-apples/" target="_blank">Data source</a></small>
+                        </p>
+                    </section> 
+
+                    <section>
+                        <h2>Responsive Design Examples</h2>
+                        <ul>
+                            <li>
+                                <a href="http://www.universalmind.com" target="_blank">UniversalMind.com</a>
+                            </li>
+                            <li>
+                                <a href="http://www.microsoft.com" target="_blank">Microsoft.com</a>
+                            </li>
+                            <li>
+                                <a href="http://www.bostonglobe.com" target="_blank">BostonGlobe.com</a>
+                            </li>
+                        </ul>
+                    </section>
+
+                </section> <!-- Why do we need responsive design -->
+
+                <!-- History / Learnings of Responsive Web Design -->
+				<section>
+					<section>
+						<h2>History / Learnings Of Responsive Web Design</h2>
+					</section>
+					<section>
+						<h2>Responsive Design:<br/>The Beginning</h2>
+						<p>
+							&nbsp;
+						</p>
+						Ethan Marcotte - A List Apart - 
+						<a href="http://alistapart.com/article/responsive-web-design" target="_blank">
+						    Responsive Web Design
+					    </a><br/>
+						May 25, 2010
+					</section>
+					<section>
+						<h2>Key points from that article</h2>
+						<ul>
+							<li class="fragment">
+							    A single site to meet multiple needs: No desire to create an iPhone, an iPad web site, etc.  How many sites can you maintain?
+							</li>
+							<li class="fragment">
+							    Fluid grids
+							</li>
+							<li class="fragment">
+							    Flexible images
+							</li>
+							<li class="fragment">
+							    Media queries
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Mobile first design</h2>
+						<p>&nbsp;</p>
+						<p style="text-align:left">
+							Luke Wroblewski:
+							<ul>
+							    <li>
+        							<a href="http://www.lukew.com/ff/entry.asp?933" target="_blank">First article on mobile first. November, 2009</a> 
+							    </li>
+							    <li>
+        							<a href="http://www.abookapart.com/products/mobile-first" target="_blank">Mobile First Book</a> 
+							    </li>
+							</ul>
+						</p>
+						<p>&nbsp;</p>
+						<p>
+						    <small class="align-left">
+							Design from the core needs of a mobile user first.  Then augment that experience as more screen
+							real estate becomes available.
+						    </small>
+						</p>
+					</section>
+				</section>
+
+                <section>
+    				<section>
+    					<h2>Basic Concepts: Media Queries</h2>
+    					<p>&nbsp;</p>
+    					<p>
+    						Commonly used to detect browser width, device-width,<br/>and pixel density
+    					</p>
+    				</section>
+    
+    				<section>
+    					<h3>But you can use it for so much <a href="http://www.w3.org/TR/css3-mediaqueries/" target="_blank">more</a> ...</h3>
+    					<p>&nbsp;</p>
+    					<ul>
+    					    <li>
+    					        orientation - portrait or landscape
+    					    </li>
+    					    <li>
+    					        aspect-ratio - 16:9 or 4:3
+    					    </li>
+    					    <li>
+    					        height - browser window height
+    					    </li>
+    					    <li>
+    					        device-height - device screen height
+    					    </li>
+    					    <li>
+    					        media - screen or print
+    					    </li>
+    					</ul><br/>
+    			        Table of <a href="http://reference.sitepoint.com/css/mediaqueries#mediaqueries__tbl_media-queries_media-features" target="_blank">media features</a>
+    				</section>
+    
+    				<section>
+    					<h2>A simple media query in CSS</h2>
+    					<p>
+    					<pre><code data-trim contenteditable>
+    @media screen and (min-width:480px) {
+      ⋮ one or more rule sets…
+    }					</code></pre>
+    					</p>
+    					<p>
+    						Note that multiple conditions can be tested and media features prefixed with min- or max-
+    					</p>
+    				</section>
+                    
+    				<section>
+    					<h2>Another media query example</h2>
+    					<pre><code data-trim>
+@media screen and (min-width: 45em) {
+        .mindshare-listings, .news-listings {
+        width: 50%;
+        float: left;
+        position: relative;
+        border-right: 1px dashed #d9d9d9;
+        padding-right: 1.5em;
+        margin-top: 0.5em;
+    }
+}
+                        </code></pre>
+                        <small>Displays MindShare content at 50% width if browser width > 720px (45em)</small>
+    				</section>
+                    
+    				<section>
+    					<h2>Loading stylesheets based on media features</h2>
+    					<p>
+    					<pre><code data-trim class="word-wrap">
+<link rel="stylesheet" type="text/css" media="screen and (min-width:800px) and (max-width:1280px)" href="/medium-width.css">    
+                        </code></pre>
+                        - or -
+    					</p>
+    					<p>
+    					<pre><code data-trim class="word-wrap">
+@import url(/medium-width.css) screen and (min-width:800px) and (max-width:1280px);
+                        </code></pre>
+    					</p>
+                        - or -
+    					<p>
+    					<pre><code data-trim class="word-wrap">
+<?xml-stylesheet media="screen and (min-width:800px) and (max-width:1280px)" rel="stylesheet"
+ href="/medium-width.css" ?>
+                        </code></pre>
+    					</p>
+    				</section>
+
+    				<section>
+    					<h3>Viewports: adapting to mobile screen sizes</h3>
+    					<p>
+    					The viewport meta tag
+    					<pre><code>
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+                        </code></pre>
+    					</p>
+    					<p>
+    						Without this most mobile browsers will use a screen width of 980px.
+    					</p>
+    					<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    				</section>
+                    
+    				<section>
+    					<h3>Controlling viewport scale</h3>
+    					<p>
+    					Min / Max scale
+    					<pre><code data-trim class="word-wrap">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, 
+minimum-scale=.5, maximum-scale=2">
+
+                        </code></pre>
+    					Preventing scale
+    					<pre><code data-trim  class="word-wrap">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, 
+user-scalable=no">
+
+                        </code></pre>
+    					</p>
+    					<p>
+    					    <small>
+    						Generally preventing user scaling of your page should be avoided, but is sometimes used 
+    					    to with Mobile Safari to prevent the page zooming in when you rotate to landscape orientation.
+    					    </small>
+    					</p>
+    				</section>
+
+    				<section>
+    					<h2>Beware display:none</h2>
+    					<p>
+    					<pre><code data-trim contenteditable>
+.sideBarContent {
+    background-image: url(images/golden_gate_800.jpg);
+}
+/* Responsive section */
+@media screen and (min-width:480px) and (max-width: 800px) {
+  .sideBarContent {
+    display: none;
+  }
+}					
+                        </code></pre>
+    					</p>
+    					<p>
+        					<small>
+        						Even if the screen size causes the display:none to be active remember that all the content
+        						in that container will still be fetched (images, etc.). It just won't be displayed.  This is
+        						an issue for mobile users if your page contains lots of content that will be hidden for
+        						mobile users.
+        					</small>
+    					</p>
+    				</section>
+                    
+    				<section>
+    					<h2>What to do about IE?</h2>
+    					<p>
+    					Media queries are not supported  
+    					<a href="http://caniuse.com/css-mediaqueries" target="_blank">prior to IE9</a>
+    					<br/>
+    					<img src="images/ie-broken.jpg">
+    				</section>
+                    
+    				<section>
+    					<h2>Conditional comments</h2>
+    					<p>
+    					Load a style sheet that would normally be used for desktop browsers.
+    					<pre><code data-trim>
+<!--[if lt IE 9]>
+ <link rel="stylesheet" type="text/css"
+ href="stylesheets/desktop.css">
+<![endif]-->
+                        </code></pre>
+    				</section>
+                    
+    				<section>
+    					<h2>Use <a href="https://github.com/scottjehl/Respond" target="_blank">Respond.js</a></h2>
+    					<p>
+    					Adds limited media query support for browsers that don't support them.
+    					<pre><code data-trim>
+<!--[if (lt IE 9) & (!IEMobile)]>
+ <script src="/js/respond.min.js"></script>
+ <![endif]-->                        
+                        </code></pre>
+                        Note Respond.js supports only min-width and max-width media queries.
+    					<pre><code data-trim>
+@media screen and (min-width: 480px){
+        ...styles for 480px and up go here
+}                        </code></pre>
+                        <small>
+                        <p>
+                            Obviously this adds some overhead as the JS file must be loaded and the CSS file parsed before 
+                            IE can continue.  Conditional comments may be more performant, if not less flexible.
+                        </p>
+                        <p>
+                            More techniques available on 
+                            <a target="_blank" href="http://coding.smashingmagazine.com/2011/08/10/techniques-for-gracefully-degrading-media-queries/">Smashing Magazine.</a>
+                        </p>
+                        </small>
+    				</section>
+
+    				<section>
+    					<h2>Media Query Access from Javascript</h2>
+    					<p>
+    					Test media queries from within Javascript
+    					<pre><code data-trim>
+if (window.matchMedia("(min-width: 400px)").matches) {
+  /* the view port is at least 400 pixels wide */
+} else {
+  /* the view port is less than 400 pixels wide */
+}                        </code></pre>
+                        <p>
+                        Or use properties like<br/><span class="fontMono">window.innerWidth</span> and <span class="fontMono">window.devicePixelRatio</span> 
+                        </p>
+                        <p>&nbsp;</p>
+                        <p>
+                        Support: window.matchMedia is supported in IE10 and later.
+                        </p>
+    				</section>
+
+                </section>
+
+                <section id="responsiveLayouts">
+                    <section>
+                        <h2>Responsive Layouts</h2>
+                        <ul>
+                            <li class="fragment">Proportional Sizing - percentage based layout</li>
+                            <li class="fragment">Introduction of additional elements as screen real estate increases.  Often referred to as 'adaptive' content.</li>
+                            <li class="fragment">Examples:
+                                <ul>
+                                    <li>
+                                        <a href="http://www.microsoft.com" target="_blank">Microsoft.com</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.bostonglobe.com" target="_blank">BostonGlobe.com</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.universalmind.com" target="_blank">UniversalMind.com</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Responsive Grids</h2>
+                        <p>&nbsp;</p>
+                        <p>
+                            <img class="fullWidth" src="images/bootstrap-grid-12.png">
+                        </p>
+                        <p>
+                            Most responsive grid systems require all columns to add up to 12.
+                        </p>
+                    </section>
+                    
+                    <section>
+                        <h2>Responsive Frameworks</h2>
+                        <p>&nbsp;</p>
+                        <p>
+                            The following frameworks all offer a responsive grid:
+                        </p>
+                        <ul>
+                            <li><a href="http://getbootstrap.com/css/#grid" target="_blank">Twitter Bootstrap</a></li>
+                            <li><a href="http://foundation.zurb.com/docs/components/grid.html" target="_blank">Zurb Foundation</a></li>
+                            <li><a href="http://stuffandnonsense.co.uk/projects/320andup/" target="_blank">320 and Up</a> 
+                            now called <a href="http://stuffandnonsense.co.uk/projects/rock-hammer/" target="_blank">Rock Hammer</a></li>
+                        </ul>
+                        <img src="images/bootstrap2_logo.png" style="width:270px;position:absolute;left:4%;bottom:-30%;-webkit-transform:rotate(-25deg)"/>
+                        <img src="images/foundation4_logo.jpg" style="width:300px;position:absolute;left:36%;bottom:-47%;-webkit-transform:rotate(0deg)"/>
+                        <img src="images/320andUp_logo.jpg" style="width:200px;position:absolute;left:80%;bottom:-50%;-webkit-transform:rotate(25deg)"/>
+                    </section>
+                    
+                    <section>
+                        <h2>Twitter Bootstrap 3.0 Responsive Grid</h2>
+                        <p>&nbsp;</p>
+                        <ul>
+                            <li class="fragment">
+                                <a href="bootstrap-basic-grid.html" target="_blank">A basic grid</a>
+                            </li>
+                            <li class="fragment">
+                                <a href="bootstrap-grid-mixed.html" target="_blank">Mobile, tablet, desktop grid</a>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h2>Bootstrap size breakpoints</h2>
+                        <p>&nbsp;</p>
+                        <small>
+                        <table class="table table-bordered table-striped" border=1>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Extra small devices
+                                        <p class="sub-caption">Phones (&lt;768px)</p>
+                                    </th>
+                                    <th>Small devices
+                                        <p class="sub-caption">Tablets (≥768px)</p>
+                                    </th>
+                                    <th>Medium devices
+                                        <p class="sub-caption">Desktops (≥992px)</p>
+                                    </th>
+                                    <th>Large devices
+                                        <p class="sub-caption">Desktops (≥1200px)</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Grid behavior</th>
+                                    <td>Horizontal at all times</td>
+                                    <td colspan="3">Collapsed to start, horizontal above breakpoints</td>
+                                </tr>
+                                <tr>
+                                    <th>Max container width</th>
+                                    <td>None (auto)</td>
+                                    <td>750px</td>
+                                    <td>970px</td>
+                                    <td>1170px</td>
+                                </tr>
+                                <tr>
+                                    <th>Class prefix</th>
+                                    <td>
+                                        <code>.col-xs-</code>
+                                    </td>
+                                    <td>
+                                        <code>.col-sm-</code>
+                                    </td>
+                                    <td>
+                                        <code>.col-md-</code>
+                                    </td>
+                                    <td>
+                                        <code>.col-lg-</code>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th># of columns</th>
+                                    <td colspan="4">12</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </small>
+                    </section>
+
+                    <section>
+                        <h2>Page Layout with Bootstrap 3</h2>
+                        An <a href="bootstrap-grid-page.html" target="_blank">example</a> page layout using Bootstrap 3 grids:
+                        <p>&nbsp;</p>
+                        <ul>
+                            <li class="fragment">
+                                Use of visible-md, visible-sm, etc. to show content selectively
+                            </li>
+                            <li class="fragment">
+                                Changing the proportion of space between the left navigation and the main content as different breakpoints are reached.
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h3>Responsive Page Layout Without Bootstrap</h3>
+                        <p>&nbsp;</p>
+                        <p><a href="http://universalmind.com" target="_blank">Universal Mind Example</a></p>
+    					<pre><code data-trim>
+@media screen and (min-width: 45em) {
+        .mindshare-listings, .news-listings {
+        width: 50%;
+        float: left;
+        position: relative;
+        border-right: 1px dashed #d9d9d9;
+        padding-right: 1.5em;
+        margin-top: 0.5em;
+    }
+}
+                        </code></pre>
+                        <small>Displays MindShare content at 50% width if browser width > 720px (45em)</small>
+                    </section>
+
+                    <section>
+                        <h2>Flexbox for responsive layout</h2>
+                        <ul>
+                            <li class="fragment">
+                                <a href="http://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">FlexBox</a>
+                                - HTML5 flexible boxes for horizontal and vertical layout with weights (flex-grow:/flex-shrink) 
+                                for justified content.
+                            </li>
+                            <li class="fragment">
+                                Supported in IE10 and pretty much <a href="http://caniuse.com/flexbox" target="_blank">everything else</a>.
+                            </li>
+                            <li class="fragment">
+                                <a href="http://codepen.io/HugoGiraudel/pen/qIAwr" target="_blank">Example 3-column layout using Flexbox</a>
+                                <ul>
+                                    <li>
+                                        Breakpoint at 600px for "aside" content to flex
+                                    </li>
+                                    <li>
+                                        Breakpoint at 800px for "main" content to flex
+                                    </li>
+                                </ul>
+                                <img src="images/flexbox_layout.png" style="width=300px" style2="position:absolute;left=0%;bottom=25%;width=300px"/>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h3>Other techniques for responsive layout</h3>
+                        <p>&nbsp;</p>
+                        <ul>
+                            <li class="fragment">
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Using_multi-column_layouts" target="_blank">
+                                    CSS Columns:
+                                </a>
+                                Number of columns adapt to browser width - <a href="simple-columns.html" target="_blank">example</a>. 
+                                Supported only in IE10, and <a href="http://caniuse.com/#feat=multicolumn" target="_blank">recent WebKit and Firefox</a> releases.
+                            </li>
+                            <li class="fragment">
+                                <a href="http://css-tricks.com/almanac/properties/g/grid/" target="_blank">Grid Layout:</a>
+                                - Supported only on IE10, but <a href="http://caniuse.com/css-grid" target="_blank">is in beta for WebKit and Firefox</a> as well.
+                            </li>
+                        </ul>
+                    </section>
+
+                </section>
+                				
+				<section id="responsiveImages">
+
+				    <section>
+    					<h2>Responsive Images</h2>
+    					<p><img style="width:50%" src="images/golden_gate_800.jpg"></p>
+    					<ul>
+    					    <li>Fluid images for varying widths</li>
+    					    <li>Loading higher resolution images for high DPI devices</li>
+    					</ul>
+				    </section>
+
+				    <section>
+    					<h3>Responsive Images and Art Direction</h3>
+    					<p>Sometimes just loading a different size image isn't enough</p>
+    					<p>
+    					    <img src="images/art_direction.jpg"/>
+    					</p>
+				    </section>
+
+				    <section>
+    					<h2>Responsive Image DPI in CSS</h2>
+    					<p>
+    					    The following techniques involve using CSS to swap the background-image url based on
+    					    the device DPI.
+    					</p>
+    					<p>&nbsp;</p>
+    					<ul>
+    					    <li class="fragment">
+    					        Swapping an image based on a <a href="css-pixel-ratio.html" target="_blank">media query</a>
+					        </li>
+    					    <li class="fragment">
+    					        Swapping images using <a href="css-image-set.html" target="_blank">-webkit-image-set()</a>.  
+    					        Note that support of this is limited to Safari 6+ and Chrome 21+ at this time.
+    					    </li>
+    					</ul>
+				    </section>
+
+				    <section>
+    					<h2>Picture Element</h2>
+    					<p>Proposal of: <a href="http://responsiveimages.org/" target="_blank">RICG - Responsive Images Community Group</a></p>
+    					<pre><code data-trim>
+<picture>
+  <source media="(min-width: 40em)" srcset="big.jpg 1x, big-hd.jpg 2x">
+  <source srcset="small.jpg 1x, small-hd.jpg 2x">
+  <img src="fallback.jpg" alt="">
+</picture>
+                        </code></pre>
+    					<ul>
+    					    <li>
+    					        Not yet implemented on any browsers
+					        </li>
+    					    <li>
+    					        But a polyfill to do nearly the same thing is ....
+    					    </li>
+    					</ul>
+				    </section>
+
+				    <section>
+    					<h2>Picturefill Polyfill</h2>
+    					<pre><code data-trim>
+<span data-picture data-alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    <span data-src="small.jpg"></span>
+    <span data-src="medium.jpg"     data-media="(min-width: 400px)"></span>
+    <span data-src="large.jpg"      data-media="(min-width: 800px)"></span>
+    <span data-src="extralarge.jpg" data-media="(min-width: 1000px)"></span>
+    
+    <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+    <noscript>
+        <img src="external/imgs/small.jpg" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    </noscript>
+</span>
+                        </code></pre>
+    					<ul>
+    					    <li>
+            					<a href="https://github.com/scottjehl/picturefill" target="_blank">Picturefill home page</a>
+					        </li>
+    					    <li>
+            					<a href="picturefill/index.html" target="_blank">Demonstration</a>
+					        </li>
+    					</ul>
+				    </section>
+
+				    <section>
+    					<h3>Picturefill for more complex queries</h3>
+    					<pre><code data-trim>
+<span data-picture data-alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    <span data-src="small.jpg"></span>
+    <span data-src="small_x2.jpg"      data-media="(min-device-pixel-ratio: 2.0)"></span>
+    <span data-src="medium.jpg"        data-media="(min-width: 400px)"></span>
+    <span data-src="medium_x2.jpg"     data-media="(min-width: 400px) and (min-device-pixel-ratio: 2.0)"></span>
+    <span data-src="large.jpg"         data-media="(min-width: 800px)"></span>
+    <span data-src="large_x2.jpg"      data-media="(min-width: 800px) and (min-device-pixel-ratio: 2.0)"></span>    
+    <span data-src="extralarge.jpg"    data-media="(min-width: 1000px)"></span>
+    <span data-src="extralarge_x2.jpg" data-media="(min-width: 1000px) and (min-device-pixel-ratio: 2.0)"></span>   
+    
+    <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+    <noscript>
+        <img src="external/imgs/small.jpg" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    </noscript>
+</span>                        
+                        </code></pre>
+				    </section>
+
+				    <section>
+    					<h3>srcset: A Picture Element Alternative</h3>
+    					<pre><code data-trim>
+<img src="logo.jpg" alt="SampleCorp"
+ srcset="large.png 600w 200h 1x,
+ large_2x-res.png 600w 200h 2x,
+ mobile-icon.png 200w 200h">
+                        </code></pre>
+    					<ul>
+    					    <li>
+            					srcset was originally proposed by Apple as it follows a similar syntax to the 
+            					-webkit-image-set() method.
+					        </li>
+    					    <li>
+            					Support for srcset <a href="http://mobile.smashingmagazine.com/2013/08/21/webkit-implements-srcset-and-why-its-a-good-thing/" target="_blank">is just now appearing</a> in early beta builds of Webkit.
+					        </li>
+    					</ul>
+				    </section>
+
+				    <section>
+    					<h3>Meanwhile: srcset-polyfill</h3>
+    					<pre><code>
+<img alt="The Breakfast Combo"
+     src="banner.jpeg"
+     srcset="banner-HD.jpeg 2x, banner-phone.jpeg 100w,
+             banner-phone-HD.jpeg 100w 2x"/>                        
+                         </code></pre>
+                         <p><a href="srcset-demo.html" target="_blank">Srcset Polyfill Demo</a></p>
+                         <p>&nbsp;</p>
+                         <small>
+        					<ul>
+        					    <li>
+                					Extends srcset support IE8+
+    					        </li>
+        					    <li>
+                					Note the number 100w in this case refers to the max-width
+    					        </li>
+        					    <li>
+                					Browsers aggressively fetch ahead the file in the "src" attribute is likely to be fetched
+                					while the Javascript is loading.  Put small images in this default attribute or leave the
+                					src attribute off entirely.
+    					        </li>
+        					    <li>
+                					Srcset Polyfill <a href="https://github.com/borismus/srcset-polyfill" target="_blank">Github repo</a>
+    					        </li>
+        					</ul>
+                         </small>
+				    </section>
+
+				    <section>
+    					<h3>Other solutions</h3>
+                         <p>&nbsp;</p>
+                         <p>
+                            These solutions have a server based component to deliver the image file at 
+                             the proper resolution.
+                         </p>
+    					<ul>
+    					    <li>
+            					<a href="http://adaptive-images.com/" target="_blank">Adaptive Images</a> - Javascript and PHP to detect screen size and DPI and serve images.
+					        </li>
+    					    <li>
+            					<a href="http://www.resrc.it/" target="_blank">ReSRC</a> - Images are pulled through this 3rd party serivce.
+					        </li>
+    					</ul>
+				    </section>
+
+				    <section>
+    					<h3>Adaptive Images</h3>
+                         <p>&nbsp;</p>
+    					<ul>
+    					    <li>
+            					<a href="http://adaptive-images.com/details.htm#install" target="_blank">Easy to set up:</a> Drop in a script, set up a .htaccess file, and add a PHP script to make regular image tags responsive.
+					        </li>
+    					    <li>
+            					Aggressive fetching of img content might result in the images being fetched before the cookie is set.
+					        </li>
+    					    <li>
+    					        Additional implementations available for:
+    					        <br/>
+            					<small>
+            					    <ul>
+            					        <li>
+            					            <a href="https://github.com/davemcdermid/AdaptiveImages" target="_blank">C#</a>
+            					        </li>
+            					        <li>
+            					            <a href="https://github.com/cfjedimaster/Adaptive-Images" target="_blank">Cold Fusion</a>
+            					        </li>
+            					        <li>
+            					            <a href="https://drupal.org/project/adaptive_image" target="_blank">Drupal</a>
+            					        </li>
+            					        <li>
+            					            <a href="http://wordpress.org/support/view/plugin-reviews/new-nine-adaptive-images" target="_blank">Wordpress</a>
+            					        </li>
+            					    </ul>
+            					</small>
+					        </li>
+    					</ul>
+				    </section>
+
+				    <section>
+    					<h3>ReSRC Responsive Image Service</h3>
+                         <p>&nbsp;</p>
+    					<ul>
+    					    <li>
+            					Hosted solution.  You have to pay for this!
+					        </li>
+    					    <li>
+            					Supports image edits.
+					        </li>
+    					    <li>
+            					Avoids the aggressive image fetch behavior by just specifying the source as part of a data-src attribute.
+					        </li>
+    					</ul>
+    					<pre><code>
+<!-- Image Tag Preferred Approach (Demo: http://www.resrc.it/demos/preferred) -->
+<img data-src="http://app.resrc.it//www.your-site.co/image.jpg" class="resrc"/>
+
+<!-- Image Tag Preview Approach (Demo: http://www.resrc.it/demos/preview) -->
+<img src="http://app.resrc.it//www.your-site.co/image.jpg" class="resrc"/>
+
+<!-- CSS Background Image (Demo: http://www.resrc.it/demos/css) -->
+<div style="background-image: url('http://app.resrc.it//www.your-site.co/image.jpg')" class="resrc"></div>
+                        </code></pre>  
+				    </section>
+
+				</section>
+
+				<section>
+				    <section>
+    					<h2>Responsive Content</h2>
+                        <p>&nbsp;</p>
+                        <p>
+                            All the content that fits...  we show.
+                        </p>
+				    </section>
+
+				    <section>
+    					<h2>Show / Hide content with media queries</h2>
+                        <p>&nbsp;</p>
+                        <ul class="no-bullets">
+                            <li class="fragment">
+                                As larger breakpoints are reached show content via display:block - but...
+                            </li>
+                            <li class="fragment">
+                                All that hiddent content inside display:none is still fetched on mobile devices!
+                            </li>
+                            <li class="fragment">
+                                OK for hiding small navigational content.  Otherwise...
+                            </li>
+                        </ul>
+				    </section>
+				    
+				    <section>
+    					<h2>Multiple template solution</h2>
+                        <ul class="no-bullets">
+                            <li class="fragment">
+                                <h4>Server Side:</h4>
+                                <ul>
+                                    <li>
+                                        Server side uses different templates to serve page content based on a value passed 
+                                        from the client side indicating browser-width, and pixel density.
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="fragment">
+                                <h4>Client Side:</h4>
+                                <ul>
+                                    <li>
+                                        Use multiple templates on the client side and have your rendering methods detect which
+                                        template to use based on browser-width.  
+                                    </li>
+                                    <li>
+                                        Consider re-rendering on browser resize.  This will take care of changes in device orientation as well.
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+				    </section>
+				    
+				    <section>
+    					<h2>Lazy Load Content</h2>
+    					<p>
+    					    Load as you go.
+    					</p>
+    					<p>&nbsp;</p>
+                        <ul>
+                            <li class="fragment">
+                                Paginated content
+                            </li>
+                            <li class="fragment">
+                                Infinite scrolling
+                            </li>
+                            <li class="fragment">
+                                Lazy load images
+                            </li>
+                        </ul>
+				    </section>
+				    
+				</section>
+
+				<section>
+					<h2>Resources</h2>
+                    <p>&nbsp;</p>
+                    <ul>
+                        <li>
+                            <a href="http://bradfrost.github.io/this-is-responsive/patterns.html" target="_blank">Responsive Patterns</a> - Brad Frost
+                        </li>
+                        <li>
+                            <a href="http://bradfrost.github.io/this-is-responsive/resources.html" target="_blank">Responsive Resources</a> - Brad Frost
+                        </li>
+                        <li>
+                            <a href="http://mobile.smashingmagazine.com/2013/05/29/the-state-of-responsive-web-design/" target="_blank">The state of responsive web design</a> - Smashing Magazine, Stéphanie Walter
+                        </li>
+                        <li>
+                            <a href="http://www.sitepoint.com/books/responsive1/" target="_blank">Jump Start Responsive Web Design</a> - Sitepoint Books
+                        </li>
+                        <li>
+                            <a href="http://responsiveimages.org/" target="_blank">RICG</a> - Responsive Images Community Group
+                        </li>
+                    </ul>
+				</section>
+
+				<section>
+					<h1>Thanks !</h1>
+                    <p>&nbsp;</p>
+                    <p>
+                        Slides / Code: <a href="http://blog.traeg.org" target="_blank">http://traeg.org</a> <br/>
+                        Twitter: <a href="http://twitter.com/ptraeg" target="_blank">@ptraeg</a>
+                    </p>
+				</section>
+
+			</div>
+
+        </div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+        <!--<div class="umLogo">-->
+        <!--    <a href="http://universalmind.com" target="_blank"><img src="images/umlogo_green_tag.png"></a>-->
+        <!--</div>-->
+
+        <div class="confLogo">
+            <a href="http://ncdevcon.com" target="_blank"><img src="images/ncdevcon-logo-trans.png"></a>
+        </div>
+
+
+    </body>
+</html>

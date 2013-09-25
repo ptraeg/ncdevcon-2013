@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Bootstrap Grid Mixed</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap -->
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media
+        queries -->
+        <!--[if lt IE 9]>
+            <script src="../../assets/js/html5shiv.js"></script>
+            <script src="../../assets/js/respond.min.js"></script>
+        <![endif]-->
+        <style>
+            [class*="col-"] {
+                padding-top: 15px;
+                padding-bottom: 15px;
+                background-color: rgba(86, 61, 124, .15);
+                border: 1px solid rgba(86, 61, 124, .2);
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div class="container">
+            <h1>Mobile, Tablet, Desktop Grid</h1>
+            <div class="row">
+                <div class="col-xs-12 col-sm-8 col-lg-8">.col-xs-12 .col-sm-8 .col-lg-8</div>
+                <div class="col-xs-6 col-sm-4 col-lg-4">.col-xs-6 .col-sm-4 .col-lg-4</div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 col-sm-4 col-lg-4">.col-xs-6 .col-sm-4 .col-lg-4</div>
+                <div class="col-xs-6 col-sm-4 col-lg-4">.col-xs-6 .col-sm-4 .col-lg-4</div>
+                <div class="col-xs-6 col-sm-4 col-lg-4">.col-xs-6 .col-sm-4 .col-lg-4</div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-lg-6">.col-xs-6 .col-sm-6 .col-lg-6</div>
+                <div class="col-xs-6 col-sm-6 col-lg-6">.col-xs-6 .col-sm-6 .col-lg-6</div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-lg-4">.col-xs-12 .col-sm-6 .col-lg-4</div>
+                <div class="col-sm-6 col-lg-4">.col-sm-6 .col-lg-4</div>
+                <div class="col-lg-4">.col-lg-4</div>
+            </div>
+            
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-8">.col-xs-12 .col-sm-6 .col-md-8</div>
+                <div class="col-xs-6 col-sm-6 col-md-4">.col-xs-6 .col-sm-6 .col-md-4</div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 col-sm-4 col-md-4">.col-xs-6 .col-sm-4 .col-md-4</div>
+                <div class="col-xs-6 col-sm-4 col-md-4">.col-xs-6 .col-sm-4 .col-md-4</div>
+                <!-- Optional: clear the XS cols if
+                their content doesn't match in height -->
+                <div class="clearfix visible-xs"></div>
+                <div class="col-xs-6 col-sm-4 col-md-4">.col-xs-6 .col-sm-4 .col-md-4</div>
+            </div>
+                        
+            <p>The above grid will display differently at "xs" (phone), "sm" (tablet), and lg (large display) resolutions</p>
+        </div>
+    </body>
+
+</html>
