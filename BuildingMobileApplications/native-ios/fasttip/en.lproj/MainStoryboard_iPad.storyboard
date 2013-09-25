@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="W2b-o4-XGt">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Ft View Controller - FastTip-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ftViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="FasTip for iPad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUn-Vp-pvn">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="61S-pT-Gj9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter check amount" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I0u-qJ-Euu">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eyw-Nq-dAQ">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="1mN-nL-dqg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Calculate Tip">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapCalculate:" destination="2" eventType="touchUpInside" id="uJr-jE-R7L"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Tip Amount:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhp-9B-Dxf">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="111" id="gGK-C1-Lg5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnJ-8J-Pso" userLabel="tipAmount">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="YbW-z6-IHv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Total Amount:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVa-JI-tQy">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="124" id="FIz-Y9-5th"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.25098040699958801" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2M5-YP-lrO" userLabel="totalAmount">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.25098040699958801" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.73535317182540894" green="0.8354637622833252" blue="0.8855862021446228" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="2M5-YP-lrO" firstAttribute="baseline" secondItem="VVa-JI-tQy" secondAttribute="baseline" type="default" id="1Ld-Gp-k1s"/>
+                            <constraint firstItem="2M5-YP-lrO" firstAttribute="leading" secondItem="hnJ-8J-Pso" secondAttribute="leading" type="user" id="3by-31-GyP"/>
+                            <constraint firstItem="2M5-YP-lrO" firstAttribute="leading" secondItem="VVa-JI-tQy" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="9kX-5O-pCR"/>
+                            <constraint firstItem="2M5-YP-lrO" firstAttribute="trailing" secondItem="hnJ-8J-Pso" secondAttribute="trailing" type="default" id="AdK-pS-Gtz"/>
+                            <constraint firstItem="I0u-qJ-Euu" firstAttribute="top" secondItem="3" secondAttribute="top" constant="90" id="BGJ-wR-NqX"/>
+                            <constraint firstItem="hnJ-8J-Pso" firstAttribute="leading" secondItem="qhp-9B-Dxf" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="BKa-Qm-rK5"/>
+                            <constraint firstItem="hnJ-8J-Pso" firstAttribute="baseline" secondItem="qhp-9B-Dxf" secondAttribute="baseline" type="default" id="DRr-0z-rvj"/>
+                            <constraint firstItem="Eyw-Nq-dAQ" firstAttribute="centerX" secondItem="I0u-qJ-Euu" secondAttribute="centerX" type="default" id="GH9-Qg-A4c"/>
+                            <constraint firstItem="VVa-JI-tQy" firstAttribute="top" secondItem="2M5-YP-lrO" secondAttribute="top" type="default" id="Jkk-11-sAO"/>
+                            <constraint firstItem="I0u-qJ-Euu" firstAttribute="centerX" secondItem="CUn-Vp-pvn" secondAttribute="centerX" type="default" id="KYP-Bg-fIk"/>
+                            <constraint firstItem="hnJ-8J-Pso" firstAttribute="top" secondItem="qhp-9B-Dxf" secondAttribute="top" type="default" id="VPu-FL-LHF"/>
+                            <constraint firstItem="VVa-JI-tQy" firstAttribute="top" secondItem="3" secondAttribute="top" constant="277" id="YMi-Ae-r5R"/>
+                            <constraint firstItem="qhp-9B-Dxf" firstAttribute="top" secondItem="3" secondAttribute="top" constant="235" id="iP6-Es-cim"/>
+                            <constraint firstItem="CUn-Vp-pvn" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="jhi-DE-pWL"/>
+                            <constraint firstItem="CUn-Vp-pvn" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="l61-aO-hvR"/>
+                            <constraint firstItem="Eyw-Nq-dAQ" firstAttribute="top" secondItem="3" secondAttribute="top" constant="148" id="mps-hh-LYQ"/>
+                            <constraint firstItem="hnJ-8J-Pso" firstAttribute="trailing" secondItem="I0u-qJ-Euu" secondAttribute="trailing" type="default" id="pOh-fx-h3g"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="FastTip" id="qQu-aa-zRd">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="PA3-Ql-ZMe">
+                            <connections>
+                                <segue destination="dRp-y9-elA" kind="push" id="O3a-bQ-C75"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="calculateButton" destination="Eyw-Nq-dAQ" id="swq-dg-1EI"/>
+                        <outlet property="checkAmountTextField" destination="I0u-qJ-Euu" id="Xva-Pe-ucb"/>
+                        <outlet property="tipAmountLabel" destination="hnJ-8J-Pso" id="04h-Im-tL9"/>
+                        <outlet property="totalAmountLabel" destination="2M5-YP-lrO" id="zLA-AM-NvW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="506" y="-145"/>
+        </scene>
+        <!--Ft Settings View Controller - Settings-->
+        <scene sceneID="TCV-2z-OX7">
+            <objects>
+                <viewController id="dRp-y9-elA" customClass="ftSettingsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kKM-jq-aBw">
+                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Set tip percentage" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="99h-aB-dnk">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="151" id="qHp-YQ-iDq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="15" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q4R-hZ-L39">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Kbz-cl-kv6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Diu-Ga-bnD">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="pbe-Sp-hkZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="99h-aB-dnk" firstAttribute="centerX" secondItem="kKM-jq-aBw" secondAttribute="centerX" type="default" id="3fQ-D5-smi"/>
+                            <constraint firstItem="99h-aB-dnk" firstAttribute="top" secondItem="kKM-jq-aBw" secondAttribute="top" constant="35" id="5hc-aH-RVj"/>
+                            <constraint firstItem="Diu-Ga-bnD" firstAttribute="trailing" secondItem="99h-aB-dnk" secondAttribute="trailing" type="default" id="CWR-n5-iXM"/>
+                            <constraint firstItem="Diu-Ga-bnD" firstAttribute="baseline" secondItem="Q4R-hZ-L39" secondAttribute="baseline" type="default" id="mOl-J8-t7D"/>
+                            <constraint firstItem="Q4R-hZ-L39" firstAttribute="top" secondItem="kKM-jq-aBw" secondAttribute="top" constant="73" id="uVI-em-hkw"/>
+                            <constraint firstItem="Diu-Ga-bnD" firstAttribute="leading" secondItem="Q4R-hZ-L39" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="vwi-yU-Ger"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="Hv6-ch-kbx">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="PW0-hM-qIa">
+                            <connections>
+                                <action selector="didTapDone:" destination="dRp-y9-elA" id="aWP-8G-aiL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tipPercentageTextField" destination="Q4R-hZ-L39" id="Ovg-nv-tEZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oub-wf-v2o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1914" y="91"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qVT-PZ-DeE">
+            <objects>
+                <navigationController id="W2b-o4-XGt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="MC6-oL-Yy5">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="NYx-MR-g45"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xE8-aB-sgo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-572" y="-53"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ftSettingsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ftSettingsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="didTapDone:"/>
+                <relationship kind="outlet" name="tipPercentageTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="ftViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ftViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="didTapCalculate:"/>
+                <relationship kind="outlet" name="calculateButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="checkAmountTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="tipAmountLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="totalAmountLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
